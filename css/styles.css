@@ -1,1 +1,28 @@
 /* my awesome website */
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script|Sorts+Mill+Goudy');
+body {font-family: 'Sorts Mill Goudy', serif;}
+
+html { 
+  background: url(http://www.lanlinglaurel.com/data/out/135/5143507-marble-wallpaper.png) no-repeat center fixed; 
+  background-size: cover;
+}
+
+.name {
+  color: gold;
+  font-size: 3em;
+}
+
+p {
+  background: rgba(0,0,0,.5);
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 10px black;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+img {
+  width: 50%;
+}
