@@ -4,10 +4,9 @@ Kendal's Website
 responsive design
 http://www.catswhocode.com/blog/making-a-website-responsive-in-3-easy-steps
 
-#ffc34d orangey
-#99ffff blueish
-#ff3333 redish
-#ffff66 yellowish
+main screen
 
-nav bar
-http://css-snippets.com/simple-horizontal-navigation/#code
+
+bg: https://s-media-cache-ak0.pinimg.com/736x/72/13/25/72132575196cb064e35aeaaf2a73ec0b.jpg
+
+magenta #900C3F
