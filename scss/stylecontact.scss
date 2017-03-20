@@ -1,0 +1,215 @@
+@import "bourbon";
+
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+// vars
+$headings: 'Patua One', cursive;
+$white: #fff;
+$grey-black: #222;
+$magenta: #900c3f;
+
+body {
+  background: #fff;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+// Nav Button
+.nav-trigger {
+  position: fixed;
+  width: 110px;
+  height: 98px;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  z-index: 200;
+  @include transform-origin(110px 0px);
+  @include transform(scale(0.6));
+  @include transition(background 0.3s linear);
+}
+
+.nav-trigger.open {
+  background: $grey-black;
+}
+
+.nav-trigger.close {
+  background: transparent;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 8px;
+  background: $white;
+  left: 15px;
+  @include transform-origin(0px 4px);
+  @include transition (opacity 0.3s $ease-in-out-cubic 0s, transform 0.24s $ease-in-out-cubic 0s);
+}
+
+@for $i from 1 through 3 {
+  .line:nth-child(#{$i}) {
+    top: 16px + (($i)-1)*28;
+  }
+}
+
+.close .line:nth-child(1) {
+  @include transform(translateX(11px) rotate(45deg));
+}
+
+.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.close .line:nth-child(3) {
+  @include transform(translateX(11px) rotate(-45deg));
+}
+
+// Full page Navigation  
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+nav.out {
+  pointer-events: none;
+}
+
+nav.in {
+  pointer-events: auto;
+}
+
+nav ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+nav li {
+  height: 20%;
+  position: relative;
+  background: $grey-black;
+  color: $white;
+  font-family: $headings;
+}
+
+nav li:hover {
+  background: green;
+}
+
+@for $i from 1 through 5 {
+  nav.in li:nth-child(#{$i}) {
+    @include transition(transform 0.5s $ease-out-cubic (0.1s*$i), opacity 0.5s linear (0.1s*$i));
+  }
+}
+
+@for $i from 5 through 1 {
+  nav.out li:nth-child(#{$i}) {
+    @include transition(transform 0.3s $ease-in-cubic (0.05s*(5-$i)), opacity 0.3s linear (0.05s*(5-$i)));
+  }
+}
+
+nav.out li {
+  @include transform(translateY(300%));
+  opacity: 0;
+}
+
+nav.in li {
+  @include transform(translateY(0));
+  opacity: 1;
+}
+
+.nav-label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  text-transform: uppercase;
+}
+
+// site content
+
+ 
+body {
+  background: #222 url("http://www.designbolts.com/wp-content/uploads/2013/02/Subtle-Grunge-Grey-Seamless-Pattern-For-Website-Background.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.social {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px dashed white;
+  background-clip: content-box;
+  padding: 10px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 70px;
+}
+
+.social .link span {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social .link:hover {
+  padding: 20px;
+  color: white;
+  margin-left: -5px;
+  transform: translateX(10px) rotate(360deg);
+}
+
+.social .link.google-plus {
+  background-color: tomato;
+  color: white;
+}
+
+.social .link.twitter {
+  background-color: #00ACEE;
+  color: white;
+}
+
+.social .link.facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+
+
+
