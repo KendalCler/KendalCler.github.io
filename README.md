@@ -1,15 +1,10 @@
 # KendalCler.github.io
 Kendal's Website
 
-148
-
-responsive design
-http://www.catswhocode.com/blog/making-a-website-responsive-in-3-easy-steps
-
-
+nav
+forked from:http://codepen.io/RadicalCaitlin/pen/yORGoa
 
 Home
-forked from: http://codepen.io/rachsmith/pen/IsixL
 img: https://s-media-cache-ak0.pinimg.com/736x/72/13/25/72132575196cb064e35aeaaf2a73ec0b.jpg
 
 
@@ -25,4 +20,4 @@ forked from: http://codepen.io/nickcil/pen/NPyMvb
 
 
 Contact
-forked from: http://codepen.io/PageOnline/pen/eBdjl
+forked from: http://codepen.io/IRoyaLPhoenixI/pen/YPjZPx?editors=0100
